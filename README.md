@@ -31,7 +31,7 @@ A modern, type-safe address book built using **Next.js**, **Prisma**, **SQLite**
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/your-username/address-book.git
+git clone https://github.com/rajmendra/address-book.git
 cd address-book
 ```
 
@@ -65,7 +65,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 src/
 ├── app/               # Next.js App Router structure
 │   ├── api/           # API Routes (e.g., /api/users)
-│   ├── layout.tsx     # App layout
 │   └── page.tsx       # Main UI logic with filters and table
 ├── components/        # UI Components (SearchBar, UserTable, etc.)
 ├── lib/               # Utility functions (e.g., fetchDummyUsers, Prisma client)
