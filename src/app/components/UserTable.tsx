@@ -1,4 +1,9 @@
-export default function UserTable({ users }: any) {
+import { User } from '@/lib/zodSchemas';
+interface UserTableProps {
+  users: User[];
+}
+
+export default function UserTable({ users }: UserTableProps) {
   return (
     <table className="w-full border">
       <thead className="bg-gray-100">

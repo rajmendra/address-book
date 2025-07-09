@@ -21,3 +21,4 @@ export const UserSchema = z.object({
 });
 
 export const UsersSchema = z.array(UserSchema);
+export type User = z.infer<typeof UserSchema>;
