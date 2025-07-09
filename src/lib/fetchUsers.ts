@@ -1,5 +1,11 @@
 export async function fetchDummyUsers(): Promise<any[]> {
-  const response = await fetch('https://dummyjson.com/users');
+  const url = process.env.NEXT_PUBLIC_DUMMY_USERS_API;
+
+  if (!url) {
+    throw new Error('NEXT_PUBLIC_DUMMY_USERS_API environment variable is not set.');
+  }
+
+  const response = await fetch(url);
 
   if (!response.ok) {
     throw new Error(`Failed to fetch users: ${response.statusText}`);
