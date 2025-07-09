@@ -27,8 +27,13 @@ A modern, type-safe address book built using **Next.js**, **Prisma**, **SQLite**
 ---
 
 ## 📦 Getting Started
+Here’s the updated **Getting Started** section with improved clarity and integration of the `.env` step:
 
-### 1. Clone the project
+---
+
+## 📦 Getting Started
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/rajmendra/address-book.git
@@ -39,23 +44,36 @@ cd address-book
 
 ```bash
 npm install
-# or yarn or pnpm
+# or use yarn or pnpm
 ```
 
-### 3. Generate Prisma client and set up database
+### 3. Set up environment variables
+
+Create a `.env` file in the root directory with the following content:
+
+```env
+NEXT_PUBLIC_DUMMY_USERS_API=https://dummyjson.com/users
+```
+
+> 💡 You can also run `cp .env.example .env` if an example file is provided.
+
+### 4. Set up the database
 
 ```bash
 npx prisma generate
 npx prisma migrate dev --name init
 ```
 
-### 4. Run the development server
+This will create your SQLite database and apply the initial migration.
+
+### 5. Start the development server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app.
+Now open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
 
 ---
 
